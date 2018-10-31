@@ -1,16 +1,18 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 
 const Profile = (props)=>{
 
-    console.log(props);
+    const isRedirect = ()=> <Redirect to="/"/>    
 
     return (
         <div>
             <Link to={{
                 pathname:`${props.match.url}/post`
             }}></Link>
-            Profile
+
+            {isRedirect()}
+
         </div>
     )
 }
